@@ -1,61 +1,5 @@
-// //1 задание
-// let arr=[];
-// let p=1
-// while (p<= 100) {
-//     if (p== 1) {
-//         arr.push(1)
-//     } else {
-//         let q = 2;
-//         let i = 2;
-//         while (p % i !== 0 ){
-//             i++;
-//             q++;
-//             } 
-//         if (q == p) {
-//             arr.push(q);
-//         }
-//     }
-//     p++
-// }
-// console.log(arr)
 
-// //2. задание
-// //предположим известно наименование товаров и их стоиомость 
-
-// let goods=['яблоко','груша','апельсин','банан']
-// let price=[12,22,,22]
-
-// // 1 вариант
-// // function countBasketPrice(){
-// //     for(i=0;i<price.length;i++){
-// //         summa=summa+price[i]
-// //     }
-// //     return summa
-// // }
-// // console.log(`ваша корзина состоит из следующих товаров: ${goods} на общую сумму ${countBasketPrice()} рублей`)
-
-// //2 вариант
-
-// console.log("ваша корзина состоит из следующих товаров:")
-//  goods.forEach(el=>console.log(el))
-//  console.log("на общую сумму:")
-//  let q=price.reduce((sum,index)=>sum+index)
-//  console.log(`${q}р`)
- 
-// //4 задание
-
-// for(i=0;i<=9;console.log(i++)){}
-
-// // 5 задание
-
-// i=1
-// let arr5=[]
-// while(i<=20){
-// arr5.push('*')
-// console.log(arr5.join(''))
-// i++
-// }
-
+// //1. задание
 // function Number(N){
 //     let d=N%100
 //         let q={
@@ -85,21 +29,12 @@
 //             }
 //     }    
 
-// Number(156034563456)
+// Number(123)
 
-// class Fruit{
-//     price=12
-// }
-// class Vegetables{
-//     price=14
-// }
-
-
-
+// //2 задание
 // let Fruits=["Яблоко","Банан","Груша"]
 // let qual=[2,3,4]
 // let price=[98,56,100]
-
 
 // let Basket={
 //  goods:{
@@ -128,15 +63,25 @@ class Fruit{
 class Vegetables extends Fruit{
     constructor(name,price,qual){
         super(name,price,qual)
-            this.name=name
-            this.price=price
-            this.qual=qual
     }
 }
-let item1 = new Fruit("Яблоко",12,13)
-let item2 = new Vegetables("Капуста",10,10)
+// Дмитрий, возник вопрос: к примеру я из class Fruit хочу наследовать только своейство name и далее в конструктор class Vegetables добавлять новые не наследованные параметры, 
+//получается все наследованные свойства  будут в консоль выводится как undefined, то есть по умолчанию они не исчезают и как бы не определены и это нормально?
+//
+
+let item1 = new Fruit("Яблоко",100,13)
+let item2 = new Vegetables("Капуста",12,100,1222)
+
+console.log(item2)
+console.log(this.qwerr)
 
 let Basket=[item1,item2]
 console.log(`Ваша корзина состоит из ${item1.name},${item2.name} на общую сумму ${item1.price*item1.qual+item2.price*item2.qual} рублей`)
+
+//3 задание
+// продукты разделить условно  на классы
+//(овощи, фрукты, напитки ) и описать их свойствами( имя, цена, количество). 
+//Далее сделать главный конструктор и от него наследовать свойства и методы + на каждый класс добавлять что то свое. 
+//Возможно  я ошибаюсь, но вижу это так.
 
 
