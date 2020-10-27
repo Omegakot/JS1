@@ -138,3 +138,19 @@ button.addEventListener("click",function(){
 let r=document.createElement("span")
 r.innerText="Смени цвет фона"})
 button.addEventListener("click",changes)
+
+
+//часы
+let s=0
+function time(){
+s++
+h1.innerText=`прошло ${s} секунд`
+if (s>5){
+s=-1
+return time()
+}
+}
+h1=document.createElement("h1")
+h1.innerText=`${s} секунд`
+document.body.appendChild(h1)
+setInterval(time,1000)
