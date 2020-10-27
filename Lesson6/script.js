@@ -21,13 +21,16 @@ for(let i=0;i<this.cart.length; i++)
 class Product {
 name = ''
 price = 0
+volume=0
 constructor (name, price){
 this.name = name
 this.price = price
+this.volume=0
+
 }
 }
 //Подсчет стоимости
-const CartInstance = new Cart(new Product('Груша',99), new Product('Яблоко',100))
+const CartInstance = new Cart(new Product('Груша',99,0), new Product('Яблоко',100,0))
 console.log(CartInstance)
 
 // рендеринг
@@ -46,8 +49,6 @@ let summa=0
 
 btn1.addEventListener("click",function(event){
 event.preventDefault()
-array.push(CartInstance.cart[0].name)
-let len= array.length
 summa+=CartInstance.cart[0].price
 span.innerText=`${summa} рублей`
 span.style.color="blue"
@@ -58,13 +59,11 @@ let items=document.createElement("h3")
 span1.innerText=`${CartInstance.cart[0].name} в количестве ${len} шт`
 })
 
-let array=[]
+
 
 btn2.addEventListener("click",function(event){
 event.preventDefault()
 array.push(CartInstance.cart[1].name)
-let len= array.length
-summa+=CartInstance.cart[1].price
 span.innerText=`${summa} рублей`
 span.style.color="blue"
 div.style.backgroundColor="gray"
