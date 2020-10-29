@@ -142,10 +142,21 @@ button.addEventListener("click",changes)
 
 //часы
 let s=0
+
 function time(){
 s++
-h1.innerText=`прошло ${s} секунд`
-if (s>5){
+let dot=":"
+if(s%2==0){
+    dot="&nbsp;"
+}else(
+    dot=":"
+)
+h1.innerHTML=`прошло&nbsp;${dot} ${s} секунд`
+dot=":"
+if (s>50 && s<60){
+    h1.style.color="red"
+}
+if (s>60){
 s=-1
 return time()
 }
