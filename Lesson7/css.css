@@ -1,5 +1,5 @@
 body {
-    background-color: whitesmoke;
+    background-color:whitesmoke;
 
 }
 
@@ -85,13 +85,11 @@ h1 {
     text-align: center;
 
 }
-
-#eee {
+#eee{
     cursor: pointer;
 }
 
-#btnminus,
-#btnminus2 {
+#btnminus,#btnminus2{
     display: block;
     padding-top: 30px;
     padding-left: 50px;

@@ -71,7 +71,7 @@ div.style.color="white"
 h2.style.color="green"
 let items=document.createElement("h3")
 span1.innerText=`${CartInstance.cart[1].name} в количестве ${CartInstance.cart[1].volume} шт`
-})
+    })
   
 let btnminus=document.querySelector("#btnminus")
 
@@ -90,7 +90,7 @@ span.innerText=`ваша корзина пуста`
 summa=0
 }
 if(CartInstance.cart[0].volume<=0){
-CartInstance.cart[0].volume=0 
+    CartInstance.cart[0].volume=0 
 }
 span1.innerText=`${CartInstance.cart[0].name} в количестве ${CartInstance.cart[0].volume} шт`
 })
@@ -112,7 +112,7 @@ span.innerText=`ваша корзина пуста`
 summa=0
 }
 if(CartInstance.cart[1].volume<=0){
-CartInstance.cart[1].volume=0 
+    CartInstance.cart[1].volume=0 
 }
 span1.innerText=`${CartInstance.cart[1].name} в количестве ${CartInstance.cart[1].volume} шт`
 })
@@ -127,41 +127,15 @@ span1.innerText=`${CartInstance.cart[1].name} в количестве ${CartInst
 
 function changes(){
 if(!CartInstance.click){
-body.style.backgroundColor="whitesmoke"
-CartInstance.click=true
+    body.style.backgroundColor="whitesmoke"
+    CartInstance.click=true
 }else{
-body.style.backgroundColor="black"
-CartInstance.click=false
+    body.style.backgroundColor="black"
+    CartInstance.click=false
 }}
 let button=document.querySelector("button")
 button.addEventListener("click",function(){
 let r=document.createElement("span")
 r.innerText="Смени цвет фона"})
+
 button.addEventListener("click",changes)
-
-
-//часы
-// let s=0
-
-// function time(){
-// s++
-// let dot=":"
-// if(s%2==0){
-//     dot="&nbsp;"
-// }else(
-//     dot=":"
-// )
-// h1.innerHTML=`прошло&nbsp;${dot} ${s} секунд`
-// dot=":"
-// if (s>50 && s<60){
-//     h1.style.color="red"
-// }
-// if (s>60){
-// s=-1
-// return time()
-// }
-// }
-// h1=document.createElement("h1")
-// h1.innerText=`${s} секунд`
-// document.body.appendChild(h1)
-// setInterval(time,1000)
