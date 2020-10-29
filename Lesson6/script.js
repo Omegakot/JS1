@@ -141,27 +141,27 @@ button.addEventListener("click",changes)
 
 
 //часы
-let s=0
+// let s=0
 
-function time(){
-s++
-let dot=":"
-if(s%2==0){
-    dot="&nbsp;"
-}else(
-    dot=":"
-)
-h1.innerHTML=`прошло&nbsp;${dot} ${s} секунд`
-dot=":"
-if (s>50 && s<60){
-    h1.style.color="red"
-}
-if (s>60){
-s=-1
-return time()
-}
-}
-h1=document.createElement("h1")
-h1.innerText=`${s} секунд`
-document.body.appendChild(h1)
-setInterval(time,1000)
+// function time(){
+// s++
+// let dot=":"
+// if(s%2==0){
+//     dot="&nbsp;"
+// }else(
+//     dot=":"
+// )
+// h1.innerHTML=`прошло&nbsp;${dot} ${s} секунд`
+// dot=":"
+// if (s>50 && s<60){
+//     h1.style.color="red"
+// }
+// if (s>60){
+// s=-1
+// return time()
+// }
+// }
+// h1=document.createElement("h1")
+// h1.innerText=`${s} секунд`
+// document.body.appendChild(h1)
+// setInterval(time,1000)
