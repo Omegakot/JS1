@@ -90,7 +90,7 @@ h1 {
 }
 
 #btnminus,#btnminus2{
-    display: block;
+    display:none;
     padding-top: 30px;
     padding-left: 50px;
     background-color: green;
