@@ -1,0 +1,16 @@
+tr {
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 20px;
+}
+
+.black {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black
+}
+
+.white {
+    width: 100px;
+    height: 100px;
+    border: 1px solid gray
